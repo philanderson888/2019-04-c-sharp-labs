@@ -1,0 +1,24 @@
+﻿@model String
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var displaystring = "Data Displayed Here";
+    var number = 10;
+}
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+<h1>Sending data from controller to View</h1>
+
+<h2>We can use 2 ways : ViewBag and ViewTitle</h2>
+
+<h2>@ViewBag.Title.</h2>
+
+@ViewData["Message2"]
+
+<p>I am now displaying some data - - - - @displaystring</p>
+<p>Number is @number</p>
+
+
+<h2>Also this string is displayed @Model</h2>

@@ -1,0 +1,21 @@
+﻿@page
+@model lab_83_asp_core_add_records.Pages.NorthwindCustomersModel
+@{
+    ViewData["Title"] = "NorthwindCustomers";
+}
+
+<h2>NorthwindCustomers</h2>
+
+<table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th>Company Name</th>
+        <th>Contact Name</th>
+    </tr>
+    @foreach (var c in Model.customers)
+    {
+        <tr>
+            <td>@c.CompanyName</td>
+            <td>@c.ContactName</td>
+        </tr>
+    }
+</table>

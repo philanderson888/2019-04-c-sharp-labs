@@ -1,0 +1,23 @@
+﻿@page
+@model lab_80_asp_core_web.Pages.ListsModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<h1>Here is a list from a model in the code-behind</h1>
+
+
+<table class="table table-striped table-hover table-bordered">
+    <tr>
+        <th>List of strings</th>
+        <th>List of strings</th>
+        <th>List of strings</th>
+    </tr>
+    @foreach(var item in Model.items)
+    {
+        <tr>
+            <td>@item</td><td>@item</td><td>@item</td>
+        </tr>
+    }
+</table>

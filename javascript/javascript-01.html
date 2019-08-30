@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World</title>
+
+</head>
+<body>
+	<h1>Hello World</h1>
+	<p>Test paragraph</p>
+
+
+<script>
+// global
+var x = 10;
+// global
+y = 10;
+function doThis(){
+	var x = 10;
+	var y = 11;
+	x++;
+	y++;
+	console.log("in function x is " + x)
+	console.log("in function y is " + y)
+}
+doThis();
+console.log("globally x is " + x)
+console.log("globally y is " + y)
+console.log(typeof(x))
+z="hi";
+console.log(typeof(z))
+d=new Date()
+console.log(typeof(d))
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿@model ASP_MVC_Entity_With_User_Registration.Models.Task2
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Task2</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category1.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category1.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Done)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Done)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateStarted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateStarted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCompleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCompleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deadline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deadline)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Task2ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

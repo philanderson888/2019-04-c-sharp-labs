@@ -1,0 +1,24 @@
+﻿@model lab_90_MVC_core.Models.ListClass
+@{
+    ViewData["Title"] = "Contact";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+
+
+<!-- Unordered list  -->
+<ul>
+    @foreach(var item in ViewBag.pageList)
+    {
+        <li>@item</li>
+    }
+</ul>
+<hr /> 
+<ul>
+    @foreach (var item in Model.list)
+    {
+        <li>@item</li>
+    }
+</ul>
+

@@ -1,0 +1,60 @@
+﻿@page
+@model lab_83_asp_core_add_records.Pages.InjectedCustomersModel
+@{
+    ViewData["Title"] = "InjectedCustomers";
+}
+
+<h2>InjectedCustomers</h2>
+
+<h3>Add Customer</h3>
+
+
+<form method="POST">
+    <div class="form-group">
+        <label for="customerID">Customer ID</label>
+        <input asp-for="customer.CustomerID" type="text" class="form-control" id="customerID" placeholder="ZYX2A">
+    </div>
+    <div class="form-group">
+        <label for="customerName">Customer Name</label>
+        <input asp-for="customer.ContactName" type="text" class="form-control" id="customerName" placeholder="Name">
+    </div>
+    <div class="form-group">
+        <label for="companyName">Company Name</label>
+        <input asp-for="customer.CompanyName" type="text" class="form-control" id="companyName" placeholder="Company">
+    </div>
+    <div class="form-group">
+        <label for="City">City</label>
+        <input asp-for="customer.City" type="text" class="form-control" id="City" placeholder="City">
+    </div>
+    <button type="submit" class="btn btn-primary ">Submit</button>
+</form>
+
+<div class="row">
+    <form method="get">
+        <input type="hidden" name="PageNumber" value="@(Model.PageNumber-1)" />
+        <button type="submit" class="btn btn-default">Previous</button>
+    </form>
+    <form method="get">
+        <input type="hidden" name="PageNumber" value="@(Model.PageNumber+1)" />
+        <button type="submit" class="btn btn-default">Next</button>
+    </form>
+</div>
+
+
+
+
+
+<table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th>Company Name</th>
+        <th>Contact Name</th>
+    </tr>
+    @foreach (var c in Model.customers)
+    {
+        <tr>
+            <td>@c.CompanyName</td>
+            <td>@c.ContactName</td>
+        </tr>
+    }
+</table>
+
